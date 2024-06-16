@@ -11,7 +11,7 @@ get '/rae' do
   # process the only parameter required. URL EXAMPLE: http://localhost:4567/rae?palabra=mate
   word = params[:palabra]
 
-  # request to REA the same as through webpage
+  # request to RAE the same as through webpage
   response = HTTParty.get(RAE_URL + word)
   doc = Nokogiri::HTML(response.body)
 
